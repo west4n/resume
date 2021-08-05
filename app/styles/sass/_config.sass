@@ -1,0 +1,92 @@
+// USER VARIABLES SECTION
+
+$accent: #c1d64b // Accent Color
+$fontsize: 16px // Body Font Size
+$bodycolor: #002c3d // Body Color
+$textcolor: #fff // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: OpenSans, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('OpenSans', normal, 400, '../fonts/OpenSans-Regular.woff2')
+@include font('OpenSans', italic, 400, '../fonts/OpenSans-Italic.woff2')
+@include font('OpenSans', normal, 600, '../fonts/OpenSans-SemiBold.woff2')
+@include font('OpenSans', normal, 800, '../fonts/OpenSans-ExtraBold.woff2')
+@include font('BebasNeue', normal, 400, '../fonts/BebasNeue-Regular.woff2')
+@include font('BebasNeue', normal, 700, '../fonts/BebasNeue-Bold.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	background: $bodycolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+
+button
+	padding: 0
+	border: 0
+	font: inherit
+	color: inherit
+	line-height: inherit
+
+h1
+	margin: 0
+
+ul
+	margin: 0
+	padding: 0
+
+li
+	list-style-type: none
+
+a
+	text-decoration: none
+	color: $textcolor
+	&:hover
+		color: $textcolor
+
+.container
+	max-width: 1130px
+	margin: 0 auto
+	padding: 0 15px
+
+.container-fluid
+	max-width: 100vw
+	margin: 0 auto
+	padding: 0 15px
