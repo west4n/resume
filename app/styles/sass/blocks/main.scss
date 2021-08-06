@@ -49,7 +49,7 @@
     }
   }
   &__wrapper {
-    max-width: 502px;
+    max-width: 505px;
     width: 100%;
   }
   &__title {
@@ -57,11 +57,32 @@
     font-size: 72px;
     font-weight: 700;
     padding-top: 88px;
+    line-height: 1;
   }
   &__subtitle {
     font-family: BebasNeue, sans-serif;
     font-weight: 400;
     font-size: 45px;
     color: #c1d64b;
+    line-height: 57px;
+  }
+  &__text {
+    color: #d6dce0;
+    font-size: 21px;
+    font-style: italic;
+    line-height: 30px;
+    margin-top: 27px;
+  }
+  &__btn{
+    color: #394001;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 19px 9px 25px;
+    background-color: #c6e445;
+    box-shadow: 0 5px 0 #1f4a61;
+    border-radius: 7px;
+    margin-top: 25px;
   }
 }
